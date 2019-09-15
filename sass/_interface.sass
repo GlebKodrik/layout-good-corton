@@ -1,0 +1,79 @@
+.section
+	&-title
+		font-size: 27px
+		font-weight: 700
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 29px
+		&::after 
+			content: ''
+			display: block
+			margin-top: 12px
+			height: 6px
+			background: url('../img/line.png') center no-repeat
+.button
+	background-color: $active-color
+	color: $text-color-light
+	font-size: 14px
+	border-radius: 5px
+	border: 1px solid transparent
+	padding: 13px 22px
+	&:hover
+		background-color: lighten($active-color , 5)
+		cursor: pointer
+	&-o 
+		background-color: transparent 
+		color: $text-color-black
+		border: 1px solid rgba(#373737,0.5)
+		&:hover
+			color: $text-color-light
+			border: 1px solid transparent
+			background-color: lighten($active-color , 5)
+			cursor: pointer
+
+
+	img 	
+		vertical-align: middle
+	&_big
+		padding-top: 21px
+		padding-bottom: 21px
+		vertical-align: middle
+.slider-arrow
+	height: 100%
+	width: 22px
+	z-index: 99
+	top: 0
+	position: absolute
+	&-feedback
+		&-left 
+			background: url('../img/feedback/arrow-feedback-left.png') center no-repeat
+			left: -22px
+		&-right
+			right: -22px
+			background: url('../img/feedback/arrow-feedback-right.png') center no-repeat
+
+	&_prod 
+		border: 1px solid $active-color
+	&_right
+		background: #fff url('../img/arrow-right.png') center no-repeat
+		right: 0
+		&:hover 
+			background: $active-color url('../img/arrow-right-active.png') center no-repeat
+	&_left 
+		background: #fff  url('../img/arrow-left.png') center no-repeat
+		left: 0
+		&:hover 
+			background: $active-color url('../img/arrow-active.png') center no-repeat
+.dark-bg
+	position: relative
+	z-index: 2
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.6)
+		z-index: -1

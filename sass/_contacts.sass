@@ -1,0 +1,52 @@
+.contacts	
+	position: relative
+	a 
+		color: black
+	&-block 
+		position: absolute
+		left: 10%
+		top: 10%
+		background-color: #fff
+		padding-top: 33px
+		padding-bottom: 39px
+		padding-left: 60px
+		padding-right: 34px
+		span
+			display: block 
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 8px
+			margin-top: 8px
+		&__text
+			margin-bottom: 30px
+		&__address
+			&:before 
+				background-image: url('../img/contacts/map.png') 
+				top: 5px
+		&__phone
+			&:before 
+				background-image: url('../img/contacts/phone.png') 
+				top: 3px
+		&__mail
+			&:before 
+				background-image: url('../img/contacts/email.png') 
+		&__img
+			position: relative
+			&:before 
+				content: ""
+				background-repeat: no-repeat
+				background-position: center
+				position: absolute
+				display: block
+				width: 17px
+				height: 25px
+				left: -24px
+
+
+.map 
+	width: 100%
+	height: 550px
+
+
+
+	

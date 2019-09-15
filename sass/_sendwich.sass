@@ -1,0 +1,85 @@
+.menu
+    &-link 
+        z-index: 9
+        display: block 
+        width: 56px
+        height: 50px
+        position: fixed 
+        top: 15px 
+        z-index: 999999
+        display: none
+        span 
+            display: block
+            height: 4px
+            width: 23px
+            background-color: #333
+            position: absolute
+            left: 50%
+            margin-left: -9px 
+            background-color: #333
+            top: 50% 
+            margin-top: -1px
+            &:before
+                content: ''
+                margin-top: -9px
+                height: 4px
+                width: 23px
+                background-color: #333
+                position: absolute
+                left: 50%
+                margin-left: -12px 
+                background-color: #333
+                top: 50% 
+                transition: all 0.2s
+            &:after 
+                content: ''
+                margin-top: 5px
+                height: 4px
+                width: 23px
+                background-color: #333
+                position: absolute
+                left: 50%
+                margin-left: -12px 
+                background-color: #333
+                top: 50% 
+                transition: all 0.2s
+        &_active
+            span 
+                background-color: transparent
+                &::before
+                    transform: rotate(135deg)
+                    margin-top: 0
+                    background-color: white
+                &::after
+                    transform: rotate(-135deg)
+                    margin-top: 0
+                    background-color: white
+    opacity: 0.95
+    background-color: #373737
+    position: fixed 
+    width: 100vw
+    height: 100vh
+    z-index: 99999
+    display: flex 
+    justify-content: center 
+    align-items: center
+    transition: all 0.5s
+    left: -100vw
+    &_active 
+        left: 0
+    ul 
+        text-align: center
+        display: flex
+        flex-direction: column
+        li  
+            border: none
+            margin-bottom: 10px
+            a 
+                transition: all 0.2s
+                color: $active-color
+                text-transform: uppercase
+                text-decoration: underline
+.scroll-off
+    overflow-y: hidden 
+.scroll-on
+    overflow-y: auto
